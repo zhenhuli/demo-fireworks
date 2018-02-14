@@ -359,7 +359,7 @@
 			ctx.fillText(text, can.width * 0.5 - ctx.measureText(text).width * 0.5, can.height * 0.4);
 			var data = ctx.getImageData(0, 0, can.width, can.height).data;
 			cfill();
-			for(i = 0; i < data.length; i += 2) {
+			for(i = 0; i < data.length; i += 4) {
 				if(data[i] !== 0 && (Math.random() * 10) >= 8.8) {
 					radius = max_radius - Math.random() * min_radius;
 					temp = { x: (i / 4) % can.width, y: ((i / 4) / can.width) };
